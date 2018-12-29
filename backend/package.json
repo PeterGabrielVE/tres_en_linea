@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Backend para el juego",
   "main": "index.js",
+  "engines": {
+    "node": "10.15.0",
+    "yarn": "^1.2.1",
+    "npm": "5.4.2"
+  },
   "directories": {
     "lib": "lib"
   },
@@ -12,6 +17,7 @@
   "author": "Pedro Gabriel Leal",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9"
   }
 }

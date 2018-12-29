@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
-app.listen(3030, () => {
-	console.log('Servidor en el puerto 3030');
+app.set('port', process.env.PORT || 3030);
+
+app.listen(app.get('port'), () => {
+	console.log(`Servidor en el puerto ${app.get('port')}`);
 });
