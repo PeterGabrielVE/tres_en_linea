@@ -25,12 +25,12 @@ class JoinGameDialog extends PureComponent {
     const actions = [
       <Link to="/">
         <FlatButton
-          label="No Thanks"
-          primary={true} />
+          label="No Gracias"
+          secondary={true} />
       </Link>,
       <RaisedButton
-        label="Join Game"
-        primary={true}
+        label="Unete al juego"
+        secondary={true}
         keyboardFocused={true}
         onClick={this.joinGame}
       />,
@@ -39,13 +39,13 @@ class JoinGameDialog extends PureComponent {
     return (
       <div>
         <Dialog
-          title="Join Game"
+          title="Unete al juego"
           actions={actions}
           modal={false}
           open={open}
           onRequestClose={this.handleClose}
         >
-          Hey <strong>{currentUser.name || 'there'}!</strong> Would you like to join this game?
+          Hey <strong>{currentUser.name || 'there'}!</strong> ¿Te gustaría unirte a este juego?
         </Dialog>
       </div>
     )

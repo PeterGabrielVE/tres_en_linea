@@ -93,7 +93,7 @@ class Game extends PureComponent {
     const winner = game.players.find(player => player.userId === game.winnerId)
     const winnerName = winner.name
 
-    return <h2>{winnerName} won</h2>
+    return <h2>{winnerName} Ganó</h2>
   }
 
   render() {
@@ -105,17 +105,17 @@ class Game extends PureComponent {
       .filter(n => !!n)
       .join(' vs ')
 
-    const currentPlayerName = `${game.players[game.turn].name}'s turn`
+    const currentPlayerName = `${game.players[game.turn].name} es tu turno`
 
     return (
       <div>
         <div className="game">
-          <Title content='TIC-TAC-TOE' />
+          <Title content='Tres en Linea' />
           <p>{title}</p>
           <div>
-            <RaisedButton label="Start game"
+            <RaisedButton label="Empezar el juego"
                           disabled={game.started || (game.players.length !== 2)}
-                          primary={true}
+                          secondary={true}
                           onClick={this.startGame} />
           </div>
 

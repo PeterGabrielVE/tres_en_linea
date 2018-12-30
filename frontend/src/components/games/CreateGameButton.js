@@ -17,8 +17,8 @@ class CreateGameButton extends PureComponent {
     return (
       <div className="CreateGameButton">
         <RaisedButton
-          label="Create Game"
-          primary={true}
+          label="Crear Juego"
+          secondary={true}
           onClick={this.props.createGame}
           icon={<StarIcon />} />
       </div>

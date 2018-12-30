@@ -64,7 +64,7 @@ export class SignUp extends PureComponent {
     }
 
     this.setState({
-      nameError: 'Please provide your name'
+      nameError: 'Por favor ingrese su nombre'
     })
     return false
   }
@@ -81,13 +81,13 @@ export class SignUp extends PureComponent {
 
     if (email.value === '') {
       this.setState({
-        emailError: 'Please provide your email address'
+        emailError: 'Por favor ingrese su correo electronico'
       })
       return false
     }
 
     this.setState({
-      emailError: 'Please provide a valid email address'
+      emailError: 'Por favor ingrese un correo valido'
     })
     return false
   }
@@ -97,7 +97,7 @@ export class SignUp extends PureComponent {
 
     if (password.getValue().length < 6) {
       this.setState({
-        passwordError: 'Password is too short'
+        passwordError: 'La contraseña es demasiado corta'
       })
       return false
     }
@@ -110,7 +110,7 @@ export class SignUp extends PureComponent {
     }
 
     this.setState({
-      passwordError: 'Password should contain both letters and numbers'
+      passwordError: 'La contraseña debe contener letras y números'
     })
     return false
   }
@@ -126,7 +126,7 @@ export class SignUp extends PureComponent {
     }
 
     this.setState({
-      passwordConfirmationError: 'Passwords do not match'
+      passwordConfirmationError: 'Las contraseñas no coinciden'
     })
     return false
   }
@@ -134,26 +134,26 @@ export class SignUp extends PureComponent {
   render() {
     return (
       <Paper style={ dialogStyle }>
-        <Title content="Sign Up" level={2} />
+        <Title content="Registro" level={2} />
 
         <form onSubmit={this.submitForm.bind(this)}>
           <div className="input">
-            <TextField ref="name" type="text" hintText="Your name"
+            <TextField ref="name" type="text" hintText="Tu nombre"
               onChange={this.validateName.bind(this)}
               errorText={ this.state.nameError} />
           </div>
           <div className="input">
-            <TextField ref="email" type="email" hintText="Email address"
+            <TextField ref="email" type="email" hintText="Correo electronico"
               onChange={this.validateEmail.bind(this)}
               errorText={ this.state.emailError} />
           </div>
           <div className="input">
-            <TextField ref="password" type="password" hintText="Password"
+            <TextField ref="password" type="password" hintText="Contraseña"
               onChange={this.validatePassword.bind(this)}
               errorText={ this.state.passwordError} />
           </div>
           <div className="input">
-            <TextField ref="passwordConfirmation" type="password" hintText="Repeat Password"
+            <TextField ref="passwordConfirmation" type="password" hintText="Repita Contraseña"
               onKeyUp={this.validatePasswordConfirmation.bind(this)}
               onChange={this.validatePasswordConfirmation.bind(this)}
               errorText={ this.state.passwordConfirmationError} />
@@ -161,12 +161,12 @@ export class SignUp extends PureComponent {
         </form>
         <FlatButton
           onClick={ this.signIn.bind(this) }
-          label="Sign in" />
+          label="Ingreso" />
         <RaisedButton
           style={ buttonStyle }
           onClick={ this.submitForm.bind(this) }
-          label="Sign up"
-          primary={true} />
+          label="Registrarse"
+           secondary={true} />
       </Paper>
     )
   }

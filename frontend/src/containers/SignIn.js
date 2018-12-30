@@ -48,24 +48,24 @@ export class SignIn extends PureComponent {
   render() {
     return (
       <Paper style={ dialogStyle }>
-        <Title content="Sign In" level={2} />
+        <Title content="Ingresar" level={2} />
 
         <form onSubmit={this.submitForm.bind(this)}>
           <div className="input">
-            <TextField ref="email" type="email" hintText="Email address" />
+            <TextField ref="email" type="email" hintText="Correo electronico" />
           </div>
           <div className="input">
-            <TextField ref="password" type="password" hintText="Password"  />
+            <TextField ref="password" type="password" hintText="ContraseñaPassword"  />
           </div>
         </form>
         <FlatButton
           onClick={ this.signUp.bind(this) }
-          label="Sign up" />
+          label="Regístrate" />
         <RaisedButton
           style={ buttonStyle }
           onClick={ this.submitForm.bind(this) }
-          label="Sign in"
-          primary={true} />
+          label="Ingresar"
+           secondary={true} />
       </Paper>
     )
   }
