@@ -28,8 +28,8 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
-    port: 8080,
-    publicPath: 'http://localhost:8080/build'
+    port: 3030,
+    publicPath: 'http://localhost:5000/build'
   },
   plugins: [ new webpack.HotModuleReplacementPlugin() ]
 }
