@@ -7,9 +7,19 @@ const http = require('http');
 const socketAuth = require('./config/socket-auth');
 const socketIO = require('socket.io');
 
-const app = express();
+const port = process.env.PORT || 3030;
 
-//Middlewares
+const app = express();
+const server = http.Server(app);
+const io = socketIO(server);
+
+io.use(socketAuth);
+
+io.on('connect', socket => {
+  socket.emit('ping', `Bienvenido al servidor, ${socket.request.user.name}`)
+  console.log(`${socket.request.user.name} conectado al servidor`)
+});
+
 app
   .use(cors())
   .use(bodyParser.urlencoded({ extended: true }))
@@ -33,10 +43,6 @@ app
       message: err.message,
       error: app.get('env') === 'development' ? err : {}
     })
-  });
+  })
 
-app.set('port', process.env.PORT || 3030);
-
-app.listen(app.get('port'), () => {
-	console.log(`Servidor en el puerto ${app.get('port')}`);
-});
+server.listen(port);

@@ -12,7 +12,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "dev": "nodemon --inspect ."
   },
   "author": "Pedro Gabriel Leal",
   "license": "ISC",
@@ -22,12 +23,15 @@
     "express": "^4.16.4",
     "http": "0.0.0",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.4.1",
+    "mongoose": "^4.12.4",
     "morgan": "^1.9.1",
-    "nodemon": "^1.18.9",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-local-mongoose": "^5.0.1",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "socketio-jwt-auth": "0.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
   }
 }
