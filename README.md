@@ -20,3 +20,5 @@ git clone  https://github.com/PeterGabrielVE/tres_en_linea.git
 cd frontend
 yarn install
 yarn start
+
+https://twitter.com/Gaboo099/status/1079269614398435328
