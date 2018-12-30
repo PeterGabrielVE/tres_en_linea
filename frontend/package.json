@@ -26,14 +26,15 @@
     "webpack": "^4.11.1",
     "webpack-cli": "^3.0.2",
     "webpack-dev-server": "^3.1.4",
-     "yarn": "^1.12.3"
+    "yarn": "^1.12.3"
   },
   "dependencies": {
+    "eslint": "^5.11.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },
   "scripts": {
-      "start": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
